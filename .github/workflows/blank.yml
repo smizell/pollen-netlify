@@ -25,4 +25,4 @@ jobs:
     - name: Setup Racket environment
       uses: smizell/racket-static-action@v1
 
-    - run: raco pollen publish ./site build
+    - run: sudp raco pollen publish ./site build
