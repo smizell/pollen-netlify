@@ -27,4 +27,4 @@ jobs:
       with:
         version: 7.6 # optional, default is 7.5
 
-    - run: racket -V
+    - run: raco pollen publish ./site build
