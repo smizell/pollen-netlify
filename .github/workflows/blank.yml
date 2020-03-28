@@ -22,21 +22,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Setup Racket environment
-        uses: Bogdanp/setup-racket@v0.6
-        with:
-          version: 7.6 # optional, default is 7.5
-
-      - name: Install Racket Dependencies
-        run: sudo raco pkg install --auto --batch
-
-      - name: Build Pollen Site
-        run: sudo raco pollen publish ./site /github/workspace/build
-
-      - name: Publish Site to Netlify
-        uses: netlify/actions/cli@master
-        with:
-          args: deploy --dir=build --prod
+      - name: Build and Deploy
+        uses: smizell/racket-static-action@v0.2
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          CONTENT_DIR: ./site
+          BUILD_DIR: ./build
