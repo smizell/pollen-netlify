@@ -31,7 +31,7 @@ jobs:
       run: sudo raco pkg install --auto --batch
 
     - name: Build Pollen Site
-      run: sudp raco pollen publish ./site build
+      run: sudo raco pollen publish ./site build
       
     - name: Publish Site to Netlify
       uses: netlify/actions/cli@master
