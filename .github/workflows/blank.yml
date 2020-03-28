@@ -28,5 +28,4 @@ jobs:
         version: 7.6 # optional, default is 7.5
 
     - run: sudo raco pkg install --auto --batch
-    - run: sudo raco setup
     - run: sudo raco pollen publish ./site build
