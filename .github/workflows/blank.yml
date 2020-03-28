@@ -23,9 +23,6 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: Setup Racket environment
-      uses: Bogdanp/setup-racket@v0.6
-      with:
-        version: 7.6 # optional, default is 7.5
+      uses: smizell/racket-static-action@v1
 
-    - run: sudo raco pkg install --auto --batch
-    - run: sudo raco pollen publish ./site build
+    - run: raco pollen publish ./site build
