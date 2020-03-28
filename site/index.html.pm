@@ -1,3 +1,3 @@
 #lang pollen
 
-◊p{This is from Pollen}
+◊p{Pollen deployed to Netlify}
