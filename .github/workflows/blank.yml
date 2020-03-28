@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build and Deploy
-        uses: smizell/racket-static-action@v0.3
+        uses: smizell/racket-static-action@v0.4
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
