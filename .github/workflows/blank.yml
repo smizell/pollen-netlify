@@ -27,5 +27,5 @@ jobs:
       with:
         version: 7.6 # optional, default is 7.5
 
-    - run: sudo raco setup --avoid-main --tidy --check-pkg-deps --unused-pkg-de
+    - run: sudo raco setup --avoid-main --tidy --check-pkg-deps --unused-pkg-deps
     - run: sudo raco pollen publish ./site build
